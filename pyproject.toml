@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "MyBroadcast"
+version = "0.9.0"
+description = "Web Cam Effects"
+authors = ["Moacir Bispo <bispo@det.ufc.br>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+opencv-python = "4.5.5.64"
+numpy = "1.22.4"
+pyvirtualcam = "0.9.1"
+mediapipe = "0.8.10"
+protobuf = "3.20.1"
+mypy = "^0.961"
+black = "^22.3.0"
+isort = "^5.10.1"
+pre-commit = "^2.19.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
